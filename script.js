@@ -1,23 +1,23 @@
-const wordArray =['read', 'visit', 'dine', 'travel']
 
-function firstPalindrome(string){
-    let reversedString = string.split(" ").reverse().join("");
+let someAarray = [3,8,9,'a', 'b', 'c', 2,5,7,'p'];
 
-    return string === reversedString;
+function examineNumbers(someArray){
+let newArray = [];
+    for(i=0; i<someArray.length;i++)
 
-}
-
-//Another function will iterate through the string array and check for the palindrome
-
-function firstPalindrome(words){
-    for(let i=0; i<words.length; i++){
-
-        let word = words[i];
-        if(firstPalindromepalindrome(word)){
-            return word;
-        }
+    if(i % 2 == 0){
+        newArray = someAarray.push(i);
+    
     }
-    return " ";
+
+ else if(i % 2 ==1){
+    newArray = someAarray.push(i);
+    
+ }
+
+else{
+    return "this is  a character"
+}
+examineNumbers();
 }
 
-console.log(firstPalindrome(wordArray));
