@@ -1,23 +1,20 @@
 
-let someAarray = [3,8,9,'a', 'b', 'c', 2,5,7,'p'];
-
-function examineNumbers(someArray){
-let newArray = [];
-    for(i=0; i<someArray.length;i++)
-
-    if(i % 2 == 0){
-        newArray = someAarray.push(i);
+//section II number II
+function containsDuplicate(nums){
     
+    const duplicateSet = new Set();
+  
+    for(const num of nums){
+      //if the set already has the current element, its duplicate
+      if(duplicateSet.has(num)){
+        return true;
+      }
+      // if not add current element to the duplicateSet
+      duplicateSet.add(num);
     }
-
- else if(i % 2 ==1){
-    newArray = someAarray.push(i);
-    
- }
-
-else{
-    return "this is  a character"
-}
-examineNumbers();
-}
-
+  
+    return false;
+  }
+  
+  const inputArray =[3,1,2,5,8,2];
+  console.log(containsDuplicate(inputArray));
