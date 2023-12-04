@@ -1,18 +1,23 @@
+const wordArray =['read', 'visit', 'dine', 'travel']
 
-function myAge(){
-console.log("please enter your age" )
+function firstPalindrome(string){
+    let reversedString = string.split(" ").reverse().join("");
+
+    return string === reversedString;
+
 }
-myAge()
 
-n=18;
-function check(){
-    return "you are a child"
+//Another function will iterate through the string array and check for the palindrome
+
+function firstPalindrome(words){
+    for(let i=0; i<words.length; i++){
+
+        let word = words[i];
+        if(firstPalindromepalindrome(word)){
+            return word;
+        }
+    }
+    return " ";
 }
-console.log(check())
 
-
-if(age < 18){
-    return "you are a child"
-}
-else if(age=>18)
-
+console.log(firstPalindrome(wordArray));
