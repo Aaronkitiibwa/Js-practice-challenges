@@ -1,20 +1,14 @@
 
-//section II number II
-function containsDuplicate(nums){
-    
-    const duplicateSet = new Set();
-  
+// section II number III
+function singleNumber(nums){
     for(const num of nums){
-      //if the set already has the current element, its duplicate
-      if(duplicateSet.has(num)){
-        return true;
+      // If occurance is the same as the last occurance,the element is unique
+      if(nums.indexOf(num) === nums.lastIndexOf(num)){
+        return num;
       }
-      // if not add current element to the duplicateSet
-      duplicateSet.add(num);
     }
-  
-    return false;
+    return null;
   }
   
-  const inputArray =[3,1,2,5,8,2];
-  console.log(containsDuplicate(inputArray));
+  const nonemptyArray = [5,3,4,2,4,6];
+  console.log(singleNumber(nonemptyArray));
